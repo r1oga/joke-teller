@@ -1,5 +1,116 @@
-/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+:root {
+  --bg: #fdbc82;
+  --text: #3f41bf;
+  --btn-text: #d82129;
+  --btn-bg: #1f174b;
+  --primary: #383498;
+  --bg-url: url('img/tronald-dump.png');
+}
 
 html {
+  /*
+    prevent that padding adds extra height/width
+    to the page and causes scrolling
+  */
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  overflow: hidden;
+  font-family: Oxygen, monospace;
+}
+
+.container {
+  width: 100vw;
+  height: 85vh;
+  margin: 1rem 0 1.5rem 0;
+  /* margin-bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+  /* lol meme: https://s2.qwant.com/thumbr/0x0/7/e/6a2209a66542249a2230d29be5d95678bc1a02a70f89ee5e33662c12582e7f/giphy.gif?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FhVIEywSQ3ZU3u%2Fgiphy.gif&q=0&b=1&p=0&a=1/ */
+}
+
+.container::after {
+  content: '';
+  background: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+button {
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer > div {
+  font-weight: 100;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+label {
+  color: var(--text);
+}
+select {
+  margin-bottom: 0.5rem;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+}
+
+#joke {
+  color: var(--text);
+  margin: 0.5rem;
+  font-weight: 600;
+}
+
+/* @media screen and (max-width: 1000px) {
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+} */
