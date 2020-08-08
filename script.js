@@ -12,7 +12,8 @@ document
     // clean joke text div
     document.getElementById('joke').innerText = ''
 
-    // hide audio
+    // stop and hide audio
+    audioElement.pause()
     audioElement.hidden = true
     // remove previous event listener
     btnElement.removeEventListener('click', mapping[selected].callback)
