@@ -2,7 +2,7 @@ const joke = document.getElementById('joke')
 const audio = document.getElementById('audio')
 const showAndPlayJoke = (text, language, voice) => {
   if (text.length > 250) {
-    joke.style.setProperty('font-size', '1rem')
+    joke.style.setProperty('font-size', '0.9rem')
   } else {
     joke.style.setProperty('font-size', '1.2rem')
   }
