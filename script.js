@@ -9,6 +9,7 @@ btnElement.addEventListener('click', mapping[selected].callback)
 document
   .getElementById('jokes')
   .addEventListener('change', ({ target: { value } }) => {
+    btnElement.disabled = false
     // clean joke text div
     document.getElementById('joke').innerText = ''
 
