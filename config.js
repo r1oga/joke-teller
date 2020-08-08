@@ -1,4 +1,5 @@
 const showAndPlayJoke = (text, language, voice) => {
+  document.getElementById('audio').hidden = false
   document.getElementById('joke').innerText = text
   VoiceRSS.speech({
     key: '8545e35dc3fc48619d6eee407b318eff',
@@ -58,9 +59,9 @@ const mapping = {
   en: {
     colors: {
       '--bg': 'lightblue',
-      '--text': 'red',
+      '--text': 'tomato',
       '--btn-text': 'white',
-      '--btn-bg': 'red',
+      '--btn-bg': 'tomato',
       '--primary': 'white'
     },
     callback: async () => {
@@ -75,19 +76,24 @@ const mapping = {
     colors: {
       '--bg': '#fff',
       '--text': 'blue',
-      '--btn-text': 'red',
-      '--btn-bg': 'blue',
-      '--primary': 'red'
+      '--btn-text': 'tomato',
+      '--btn-bg': 'lightblue',
+      '--primary': 'tomato'
     },
     callback: async () => {
-      const response = await fetch('https://www.blagues-api.fr/api/random', {
-        headers: {
-          Authorization:
-            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzE3NDIxMjU1MDMyMDQ1NjM5IiwibGltaXQiOjEwMCwia2V5IjoibnVZYzZhbjBJaE0ybXY1aUozQ2Jpc0JkdjhlaDR4QVJZMW95WlZGREZhQmI3aUN2aFMiLCJjcmVhdGVkX2F0IjoiMjAyMC0wOC0wOFQwOTo1NDowNyswMjowMCIsImlhdCI6MTU5Njg3MzI0N30.jqdF9UJpzHreGrjBk05jwW5dCRlx5Gcrn8lLNXrhIJw'
+      const response = await fetch(
+        'https://c0rsanywhere.herokuapp.com/https://blague.xyz/api/vdm/random',
+        {
+          headers: {
+            Authorization:
+              's5YZOz7pHvRp_WEJ0hvE_ovckgaMuXCH71bBGKtYbu3YokIlBQ4o69FIdmOn_.Oc'
+          }
         }
-      })
-      const { joke, answer } = await response.json()
-      showAndPlayJoke(`${joke} \n ${answer}`, 'fr-fr', 'Iva')
+      )
+      const {
+        vdm: { content }
+      } = await response.json()
+      showAndPlayJoke(content, 'fr-fr', 'Iva')
     }
   },
   kanye: {
