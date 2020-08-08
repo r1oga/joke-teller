@@ -1,6 +1,13 @@
+const joke = document.getElementById('joke')
+const audio = document.getElementById('audio')
 const showAndPlayJoke = (text, language, voice) => {
-  document.getElementById('audio').hidden = false
-  document.getElementById('joke').innerText = text
+  if (text.length > 250) {
+    joke.style.setProperty('font-size', '1rem')
+  } else {
+    joke.style.setProperty('font-size', '1.2rem')
+  }
+  audio.hidden = false
+  joke.innerText = text
   VoiceRSS.speech({
     key: '8545e35dc3fc48619d6eee407b318eff',
     src: text,

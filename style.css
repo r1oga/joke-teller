@@ -88,11 +88,6 @@ button:active {
   transform: scale(0.98);
 }
 
-button:disabled {
-  cursor: default;
-  filter: brightness(30%);
-}
-
 select {
   margin-bottom: 2rem;
   font-size: 1rem;
@@ -104,7 +99,6 @@ select {
   color: var(--text);
   margin: 0.5rem 1.4rem;
   font-weight: 600;
-  font-size: 1.3rem;
 }
 
 audio {
