@@ -18,17 +18,15 @@
   <body>
     <main>
       <div class="container">
-        <label>Choose from:
-          <select name="jokes" id="jokes">
+          <select name="jokes" id="jokes" aria-label="select joke type">
             <option value="tronald-dump"">💩 Tronald Dump</option>
             <option value="chuck-norris">🥋 Chuck Norris</option>
             <option value="kanye">🧸 Kanye West</option>
-            <option value="fr">🇫🇷 Francais</option>
+            <option value="fr">🇫🇷 Vie de Merde</option>
             <option value="en">🇺🇸 / 🇬🇧 English</option>
           </select>
-        </label>
         <button id="button">LOL</button>
-        <audio id="audio" controls></audio>
+        <audio id="audio" controls hidden></audio>
         <div id='joke'></div>
       </div>
     </main>

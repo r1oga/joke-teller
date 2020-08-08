@@ -11,6 +11,9 @@ document
   .addEventListener('change', ({ target: { value } }) => {
     // clean joke text div
     document.getElementById('joke').innerText = ''
+
+    // hide audio
+    audioElement.hidden = true
     // remove previous event listener
     btnElement.removeEventListener('click', mapping[selected].callback)
 
