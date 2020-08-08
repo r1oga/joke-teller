@@ -111,6 +111,10 @@ audio {
   margin-top: 0.5rem;
 }
 
+audio {
+  margin-top: 0.5rem;
+}
+
 /* @media screen and (max-width: 1000px) {
   button {
     box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
